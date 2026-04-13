@@ -35,8 +35,7 @@
         <p id="status"></p>
     </div>
 
-    <script>
-        // GANTI TULISAN DI BAWAH INI DENGAN LINK CLOUDFLARE WORKER KAMU NANTI
+        <script>
         const LINK_WORKER_KAMU = "https://update-pesanan-supabase.hanamemoria.workers.dev/";
 
         document.getElementById('formPesanan').addEventListener('submit', async function(event) {
@@ -47,7 +46,8 @@
             const formData = new FormData(this);
 
             try {
-                const response = await fetch(https://update-pesanan-supabase.hanamemoria.workers.dev/, {
+                // DI SINI PERBAIKANNYA: Menggunakan nama LINK_WORKER_KAMU
+                const response = await fetch(LINK_WORKER_KAMU, {
                     method: 'POST',
                     body: formData
                 });
